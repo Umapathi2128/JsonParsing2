@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Json Parsing</string>
+
+    <string name="name">Name</string>
+    <string name="id">ID</string>
+    <string name="email">Email</string>
+    <string name="gender">Gender</string>
+    <string name="address">Address</string>
+    <string name="mobile">Mobile</string>
+    <string name="phone">Phone</string>
+    <string name="office">Office</string>
+    <string name="home">Home</string>
+</resources>
