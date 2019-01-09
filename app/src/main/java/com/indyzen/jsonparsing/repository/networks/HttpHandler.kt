@@ -1,12 +1,10 @@
 package com.indyzen.jsonparsing.repository.networks
 
 import android.util.Log
-import java.io.BufferedInputStream
-import java.io.BufferedReader
-import java.io.InputStream
-import java.io.InputStreamReader
 import java.net.HttpURLConnection
 import java.net.URL
+import java.io.*
+
 
 /**
  * Created by Umapathi on 24/12/18.
@@ -20,6 +18,16 @@ class HttpHandler {
         val url = URL(reqUrl)
         val httpConnection = url.openConnection() as HttpURLConnection
 //        val con=url.openConnection()
+
+//        httpConnection.setRequestProperty("Content-Type", "application/json; charset=UTF-8")
+//        httpConnection.requestMethod = "POST"
+//        httpConnection.doInput = true
+//        httpConnection.instanceFollowRedirects = false
+//        httpConnection.connect()
+//        val writer = OutputStreamWriter(httpConnection.outputStream, "UTF-8")
+//        writer.write(payload)
+//        writer.close()
+
         httpConnection.requestMethod = "GET"
         val conn: InputStream = BufferedInputStream(httpConnection.inputStream)
 
@@ -27,7 +35,7 @@ class HttpHandler {
         return response
     }
 
-    fun convertStreamToString(iStream: InputStream): String {
+    private fun convertStreamToString(iStream: InputStream): String {
         val bReader = BufferedReader(InputStreamReader(iStream, "UTF-8"))
         val sBuilder = StringBuilder()
         var line:String=""

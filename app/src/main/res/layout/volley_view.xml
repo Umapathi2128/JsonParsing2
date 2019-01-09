@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable name="volleyData"
+                  type="com.indyzen.jsonparsing.ui.volley.VolleyDataModel"/>
+    </data>
+    <android.support.constraint.ConstraintLayout
+            android:layout_marginBottom="@dimen/dp10"
+            android:layout_width="match_parent" android:layout_height="wrap_content">
+
+        <TextView
+                android:id="@+id/txtName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{volleyData.name}"/>
+        <TextView
+                android:id="@+id/txtImageUrl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{volleyData.imageUrl}"
+                app:layout_constraintTop_toBottomOf="@+id/txtName"/>
+    </android.support.constraint.ConstraintLayout>
+</layout>

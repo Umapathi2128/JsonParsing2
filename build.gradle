@@ -25,3 +25,49 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+ext {
+    supportVersion = '28.0.0'
+    design = '28.0.0'
+    compileVersion = 28
+    minSdkVersion = 19
+    testReuunerVer = '1.0.2'
+    testExpressoVer = '3.0.2'
+    kotlinVersion = '1.3.10'
+    jUnitVer = '4.12'
+    constraintVer = '1.1.3'
+    volley = '1.1.0'
+    retrofit = '2.1.0'
+    gSon = '2.1.0'
+    okHttp = '3.11.0'
+    rxJava = '1.1.6'
+    rxJavaAndroid = '1.2.1'
+    rxJavaAdapter = '2.1.0'
+    httpInterceptors = '3.8.0'
+
+
+    commonDependency = [
+            supportLib             : "com.android.support:appcompat-v7:$supportVersion",
+
+            kotlinVersionDepencency: "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
+
+            jUnit                  : "junit:junit:$jUnitVer",
+            constraint             : "com.android.support.constraint:constraint-layout:$constraintVer",
+            testRunner             : "com.android.support.test:runner:$testReuunerVer",
+            testExpresso           : "com.android.support.test.espresso:espresso-core:$testExpressoVer",
+            cardView               : "com.android.support:cardview-v7:$design",
+            design                 : "com.android.support:design:$design",
+            recycler                 : "com.android.support:recyclerview-v7:$design"
+    ]
+    httpLibraries = [
+            volley  : "com.android.volley:volley:$volley",
+            retrofit: "com.squareup.retrofit2:retrofit:$retrofit",
+            gSon: "com.squareup.retrofit2:converter-gson:$gSon",
+            rxJava: "io.reactivex:rxjava:$rxJava",
+            rxJavaAndroid: "io.reactivex:rxandroid:$rxJavaAndroid",
+            rxJavaAdapter:"com.squareup.retrofit2:adapter-rxjava:$rxJavaAdapter",
+            okHttp:"com.squareup.okhttp3:okhttp:$okHttp",
+            httpInterceptors:"com.squareup.okhttp3:logging-interceptor:$httpInterceptors"
+
+    ]
+}

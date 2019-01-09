@@ -10,4 +10,8 @@
     <string name="phone">Phone</string>
     <string name="office">Office</string>
     <string name="home">Home</string>
+
+    <string name="jsonParsing">JSON Parsing</string>
+    <string name="volley">Volley Library</string>
+    <string name="retrofit">Retrofit Library</string>
 </resources>
